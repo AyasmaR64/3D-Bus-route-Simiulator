@@ -7,6 +7,7 @@ const ASSETS = [
   "./manifest.json",
   "./busStops.json",
   "./routes/balangoda-rajavaka-mulgama.geojson",
+  "./routes/balangoda-watawala-mulgama.geojson",
   "./routes/balangoda-welioya-hambegamuwa.geojson",
   "./routes/balangoda-welipatayaya-kaltota.geojson",
   "./routes/balangodaTown.geojson",
