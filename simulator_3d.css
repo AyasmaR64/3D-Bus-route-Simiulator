@@ -1,0 +1,773 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#pwa-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  color: #dedede;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+  overflow: hidden;
+}
+
+#pwa-splash.splash-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Bus SVG Wrapper */
+.splash-bus {
+  width: 120px;
+  height: 120px;
+  color: #ffffff;
+  overflow: visible;
+  z-index: 2;
+}
+
+/* =========================================
+   BUS BODY & TYRE ANIMATION SEQUENCE
+   ========================================= */
+.splash-bus #bus-body {
+  fill: rgb(255, 255, 255);
+  animation: bus-body-step 1s infinite ease-in-out;
+}
+
+.splash-bus #wheel-left,
+.splash-bus #wheel-right {
+  fill: #b3b3b3;
+  animation: bus-tyres-step 1s infinite ease-in-out;
+  transform-origin: center bottom;
+}
+
+@keyframes bus-body-step {
+  0%,
+  50%,
+  100% {
+    transform: translate(0px, 30px);
+  }
+  25% {
+    transform: translate(-10px, 15px);
+  }
+  75% {
+    transform: translate(10px, 15px);
+  }
+}
+
+@keyframes bus-tyres-step {
+  0% {
+    transform: translateX(0px) scaleX(1);
+  }
+  25% {
+    transform: translateX(-11px) scaleX(1);
+  }
+  50% {
+    transform: translateX(0px) scaleX(1.01);
+  }
+  75% {
+    transform: translateX(11px) scaleX(1);
+  }
+  100% {
+    transform: translateX(0px) scaleX(1.01);
+  }
+}
+
+/* =========================================
+   WINDSHIELD WIPER ANIMATIONS
+   ========================================= */
+.splash-bus #wiper-left {
+  fill: #b0b0b0;
+  transform-origin: 130px 292px;
+  animation: wipe-sweep-left 1.3s infinite ease-in-out;
+}
+
+.splash-bus #wiper-right {
+  fill: #b0b0b0ff;
+  transform-origin: 382px 292px;
+  animation: wipe-sweep-right 1.3s infinite ease-in-out;
+}
+
+@keyframes wipe-sweep-left {
+  0%,
+  45%,
+  55%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes wipe-sweep-right {
+  0%,
+  45%,
+  55%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* =========================================
+   LABELS
+   ========================================= */
+.splash-title {
+  margin-top: 16px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.splash-status {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #d2d2d2;
+  z-index: 2;
+}
+
+#pwa-install-banner {
+  display: none;
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  max-width: 480px;
+  margin: 0 auto;
+  background: #ffffff;
+  color: #1c1c1e;
+  border-radius: 14px;
+  padding: 14px 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  border: 1px solid #e5e5ea;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.pwa-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+#pwa-install-btn {
+  display: none;
+  background: #007aff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#pwa-close-btn {
+  background: none;
+  border: none;
+  color: #8e8e93;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+#map {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #b7d8f3;
+}
+
+/* Bus Stop Popup (10px font) */
+.bus-stop-popup .maplibregl-popup-content {
+  font-size: 10px;
+  line-height: 1.25;
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: rgba(15, 23, 42, 0.94);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+}
+
+.bus-stop-popup .maplibregl-popup-tip {
+  border-top-color: rgba(15, 23, 42, 0.94);
+  border-bottom-color: rgba(15, 23, 42, 0.94);
+}
+
+/* High-Accuracy Geolocation Button (Bottom-Left) */
+.geo-btn {
+  position: fixed;
+  bottom: 106px;
+  left: 12px;
+  z-index: 15;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background: hsla(0, 0%, 0%, 0);
+  color: #e04001;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.12s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.geo-btn:active {
+  transform: scale(0.95);
+}
+
+.geo-btn.locating {
+  color: #ff783b;
+  background: rgba(37, 37, 37, 0.661);
+}
+
+.geo-btn.active {
+  background: #00000000;
+  color: #de3e00d82;
+  border-color: #f54500;
+  box-shadow: 0 0 14px rgba(8, 9, 10, 0.361);
+}
+
+.geo-marker-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #3b82f6;
+  border: 2.5px solid #ffffff;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.9);
+}
+
+/* Top HUD */
+.hud-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom-right-radius: 14px;
+  border-bottom-left-radius: 14px;
+  padding: 10px 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.hud-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.live-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 10px #22c55e;
+  animation: pulse 1.6s infinite;
+}
+
+/* Overspeed Warning Indicator (> 90 km/h) */
+.overspeed-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #475569;
+  opacity: 0.35;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.overspeed-indicator.active {
+  background: #ef4444;
+  opacity: 1;
+  box-shadow: 0 0 12px #ef4444;
+  animation: overspeed-blink 0.6s infinite;
+}
+
+@keyframes overspeed-blink {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.9);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.85);
+  }
+}
+
+.hud-brand h1 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fef08a;
+}
+
+.route-select {
+  background: rgba(30, 41, 59, 0.9);
+  color: #fef08a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 3px 6px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  margin-top: 2px;
+}
+
+.route-select option {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+/* Single-ID Toggle Button + Hamburger Animation */
+.btn-icon {
+  position: fixed;
+  bottom: 75px;
+  right: 12px;
+  z-index: 20;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(76, 104, 171, 0);
+  padding: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-icon .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: #050505a7;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+.btn-icon .icon-close {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+/* Active state when popup is open */
+.btn-icon.active .icon-menu {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+
+.btn-icon.active .icon-close {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.hud-stats {
+  display: flex;
+  gap: 8px;
+}
+
+.stat-box {
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 5px 10px;
+  min-width: 78px;
+}
+
+.stat-label {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.stat-val {
+  font-size: 13px;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.stat-val.overspeed {
+  color: #f87171;
+}
+
+.status-moving {
+  color: #4ade80;
+}
+
+.status-stopped {
+  color: #facc15;
+}
+
+/* Collapsible Control Popup */
+.control-popup {
+  position: absolute;
+  bottom: 125px;
+  right: 12px;
+  z-index: 15;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 240px;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.control-popup.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+}
+
+.control-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.speed-controller {
+  background: rgba(30, 41, 59, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9px;
+  padding: 8px 10px;
+}
+
+.speed-controller-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #cbd5e1;
+  margin-bottom: 6px;
+}
+
+#speedSliderValue {
+  color: #fef08a;
+  font-weight: 700;
+}
+
+.speed-slider {
+  width: 100%;
+  accent-color: #ef4444;
+  cursor: pointer;
+}
+
+.btn {
+  width: 100%;
+  padding: 9px 10px;
+  border: none;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.1s ease,
+    opacity 0.15s ease;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn-primary {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: #334155;
+  color: #f1f5f9;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Bottom HUD (Progress Only) */
+.hud-bottom {
+  position: absolute;
+  bottom: 14px;
+  left: 12px;
+  right: 12px;
+  z-index: 10;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.progress-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #cbd5e1;
+  margin-bottom: 6px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #ef4444, #f59e0b);
+  border-radius: 999px;
+  transition: width 0.1s linear;
+}
+
+/* Light Theme Overrides */
+body.theme-light {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+body.theme-light .hud-top,
+body.theme-light .hud-bottom {
+  background: rgba(255, 255, 255, 0.92);
+  color: #0f172a;
+  border-color: rgba(15, 23, 42, 0.12);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+}
+
+body.theme-light .hud-brand h1 {
+  color: #b91c1c;
+}
+
+body.theme-light .route-select {
+  background: #f8fafc;
+  color: #0f172a;
+  border-color: rgba(15, 23, 42, 0.18);
+}
+
+body.theme-light .route-select option {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+body.theme-light .stat-box {
+  background: #f8fafc;
+  border-color: rgba(15, 23, 42, 0.1);
+}
+
+body.theme-light .stat-label {
+  color: #475569;
+}
+
+body.theme-light .stat-val {
+  color: #0f172a;
+}
+
+body.theme-light .status-moving {
+  color: #15803d;
+}
+
+body.theme-light .status-stopped {
+  color: #b45309;
+}
+
+body.theme-light .control-popup {
+  background: rgba(255, 255, 255, 0.96);
+  color: #0f172a;
+  border-color: rgba(15, 23, 42, 0.15);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18);
+}
+
+body.theme-light .speed-controller {
+  background: #f8fafc;
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+body.theme-light .speed-controller-header {
+  color: #334155;
+}
+
+body.theme-light #speedSliderValue {
+  color: #b91c1c;
+}
+
+body.theme-light .btn-secondary {
+  background: #e2e8f0;
+  color: #0f172a;
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+body.theme-light .progress-row {
+  color: #334155;
+}
+
+body.theme-light .progress-track {
+  background: rgba(15, 23, 42, 0.12);
+}
+
+body.theme-light .geo-btn {
+  background: rgba(255, 255, 255, 0.341);
+  color: #2e2e2efd;
+  border-color: rgba(15, 23, 42, 0.16);
+}
+body.theme-light .geo-btn.locating {
+  color: #ff571d;
+}
+body.theme-light .geo-btn.active {
+  background: #00000000;
+  color: rgb(187, 43, 0);
+}
+
+body.theme-light .bus-stop-popup .maplibregl-popup-content {
+  background: rgba(255, 255, 255, 0.96);
+  color: #0f172a;
+  border: 1px solid rgba(15, 23, 42, 0.18);
+}
+
+body.theme-light .bus-stop-popup .maplibregl-popup-tip {
+  border-top-color: rgba(255, 255, 255, 0.96);
+  border-bottom-color: rgba(255, 255, 255, 0.96);
+}
+
+/* Install Modal */
+.install-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.install-modal.hidden {
+  display: none;
+}
+
+.install-card {
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 20px;
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+}
+
+.install-card h3 {
+  font-size: 16px;
+  color: #fef08a;
+  margin-bottom: 8px;
+}
+
+.install-card p {
+  font-size: 13px;
+  color: #cbd5e1;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.install-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.maplibregl-ctrl-top-right {
+  top: 65px;
+}
+div.maplibregl-ctrl.maplibregl-ctrl-group {
+  margin-bottom: 70px;
+  margin-right: 15px;
+}
+.maplibregl-ctrl-group {
+  background-color: #ffffff00;
+}
+
+/* #fb0000 north pointer on MapLibre compass*/
+.maplibregl-ctrl button.maplibregl-ctrl-compass .maplibregl-ctrl-icon {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29 29'%3E%3Cpath d='M14.5 3.5L19 14.5H10L14.5 3.5Z' fill='%23ff1d1d'/%3E%3Cpath d='M14.5 25.5L10 14.5H19L14.5 25.5Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.maplibregl-ctrl button.maplibregl-ctrl-compass svg path:first-child {
+  fill: #ff1d1d;
+}
+.maplibregl-ctrl button.maplibregl-ctrl-compass svg path:last-child {
+  fill: #ffffff;
+}

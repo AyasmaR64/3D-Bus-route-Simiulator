@@ -1,0 +1,611 @@
+{
+  "BL-01": [
+    {
+      "name": {
+        "si": "බලංගොඩ ප්‍රධාන බස් නැවතුම්පොළ",
+        "en": "Balangoda Main Bus Station",
+        "ta": "பலாங்கொடை பிரதான பஸ் நிலையம்"
+      },
+      "coords": [80.701785, 6.6503023]
+    },
+    {
+      "name": {
+        "si": "කාගිල්ස්",
+        "en": "Cargils",
+        "ta": "தேசிய பாடசாலை"
+      },
+      "coords": [80.700412, 6.647603]
+    },
+    {
+      "name": {
+        "si": "පොලිසිය",
+        "en": "Police",
+        "ta": "கிரிமெட்டிதென்ன"
+      },
+      "coords": [80.700167, 6.649901]
+    },
+    {
+      "name": {
+        "si": "තැපැල් කන්තෝරුව",
+        "en": "Post office",
+        "ta": "தெப்பேலமுல்ல"
+      },
+      "coords": [80.701142, 6.648424]
+    },
+    {
+      "name": {
+        "si": "බලංගොඩ ප්‍රධාන බස් නැවතුම්පොළ",
+        "en": "Balangoda Main Bus Station",
+        "ta": "பலாங்கொடை பிரதான பஸ் நிலையம்"
+      },
+      "coords": [80.701785, 6.6503023]
+    }
+  ],
+  "BL-02": [
+    {
+      "name": {
+        "si": "බලංගොඩ ප්‍රධාන බස් නැවතුම්පොළ",
+        "en": "Balangoda Main Bus Station",
+        "ta": "பலாங்கொடை பிரதான பஸ் நிலையம்"
+      },
+      "coords": [80.701785, 6.6503023]
+    },
+    {
+      "name": {
+        "si": "Ellepola",
+        "en": "Ellepola",
+        "ta": "Ellepola"
+      },
+      "coords": [80.686017, 6.631726]
+    },
+    {
+      "name": {
+        "si": "කිරිමැටිතැන්න",
+        "en": "Kirimatitenna",
+        "ta": "Kirimatitenna"
+      },
+      "coords": [80.723935, 6.631739]
+    },
+    {
+      "name": {
+        "si": "හොරකැටිය",
+        "en": "Horaketiya",
+        "ta": "Horaketiya"
+      },
+      "coords": [80.661316, 6.627234]
+    },
+    {
+      "name": {
+        "si": "මාදොල",
+        "en": "Madola",
+        "ta": "Madola"
+      },
+      "coords": [80.646961, 6.61908]
+    },
+    {
+      "name": {
+        "si": "උඩවෙල",
+        "en": "Udawela",
+        "ta": "Udawela"
+      },
+      "coords": [80.63872, 6.610269]
+    },
+    {
+      "name": {
+        "si": "ගුරුපස්වල",
+        "en": "Gurupaswala",
+        "ta": "Gurupaswala"
+      },
+      "coords": [80.634168, 6.612639]
+    },
+    {
+      "name": {
+        "si": "ඔපනායක",
+        "en": "Opanayake",
+        "ta": "Opanayake"
+      },
+      "coords": [80.622909, 6.608354]
+    },
+    {
+      "name": {
+        "si": "හුණුවල හංදිය",
+        "en": "Hunuwala junction",
+        "ta": "Hunuwala junction"
+      },
+      "coords": [80.605146, 6.606555]
+    },
+    {
+      "name": {
+        "si": "මොරතොට",
+        "en": "Morathota",
+        "ta": "Morathota"
+      },
+      "coords": [80.579144, 6.612739]
+    },
+    {
+      "name": {
+        "si": "පැල්මඩුල්ල ප්‍රධාන බස් නැවතුම",
+        "en": "Pelmadulla Bus Station",
+        "ta": "Pelmadulla Bus Station"
+      },
+      "coords": [80.541567, 6.624454]
+    },
+    {
+      "name": {
+        "si": "සන්නස්ගම",
+        "en": "Sannasgama",
+        "ta": "Sannasgama"
+      },
+      "coords": [80.5001, 6.644443]
+    },
+    {
+      "name": {
+        "si": "වැලිමළුව",
+        "en": "Welimaluwa",
+        "ta": "Welimaluwa"
+      },
+      "coords": [80.466124, 6.663841]
+    },
+    {
+      "name": {
+        "si": "පැල්වාඩිය",
+        "en": "Pelwadiya",
+        "ta": "Pelwadiya"
+      },
+      "coords": [80.442401, 6.663469]
+    },
+    {
+      "name": {
+        "si": "කෙටන්දොල",
+        "en": "Ketandola",
+        "ta": "Ketandola"
+      },
+      "coords": [80.436224, 6.664372]
+    },
+    {
+      "name": {
+        "si": "තිරුවානාකැටිය",
+        "en": "Thiruwanaketiya",
+        "ta": "Thiruwanaketiya"
+      },
+      "coords": [80.431499, 6.665634]
+    },
+    {
+      "name": {
+        "si": "බටුගෙදර",
+        "en": "Batugedara",
+        "ta": "Batugedara"
+      },
+      "coords": [80.414718, 6.679557]
+    },
+    {
+      "name": {
+        "si": "කුඩුගල්වත්ත",
+        "en": "Kudugalwatte",
+        "ta": "Kudugalwatte"
+      },
+      "coords": [80.407324, 6.680278]
+    },
+    {
+      "name": {
+        "si": "රත්නපුර නගර සභාව",
+        "en": "Ratnapura Municipal Council",
+        "ta": "Ratnapura Municipal Council"
+      },
+      "coords": [80.403387, 6.678433]
+    },
+    {
+      "name": {
+        "si": "රත්නපුර ප්‍රධාන බස් නැවතුම්පොළ",
+        "en": "Ratnapura Central Bus Stand",
+        "ta": "Ratnapura Central Bus Stand"
+      },
+      "coords": [80.401901, 6.683433]
+    }
+  ],
+  "BL-03": [
+    {
+      "name": {
+        "si": "බලංගොඩ ප්‍රධාන බස් නැවතුම්පොළ",
+        "en": "Balangoda Main Bus Station",
+        "ta": "பலாங்கொடை பிரதான பஸ் நிலையம்"
+      },
+      "coords": [80.701785, 6.6503023]
+    },
+    {
+      "name": {
+        "si": "ජාතික පාසැල",
+        "en": "National School",
+        "ta": "தேசிய பாடசாலை"
+      },
+      "coords": [80.707849, 6.643827]
+    },
+    {
+      "name": {
+        "si": "කිරිමැටිතැන්න",
+        "en": "Kirimatitenna",
+        "ta": "கிரிமெட்டிதென்ன"
+      },
+      "coords": [80.723935, 6.631739]
+    },
+    {
+      "name": {
+        "si": "දෙපෑලමුල්ල",
+        "en": "Depalamulla",
+        "ta": "தெப்பேலமுல்ல"
+      },
+      "coords": [80.759802, 6.6180825]
+    },
+    {
+      "name": {
+        "si": "බෝවත්ත",
+        "en": "Bowatta",
+        "ta": "Bowatta"
+      },
+      "coords": [80.773679, 6.612515]
+    },
+    {
+      "name": {
+        "si": "රජවක",
+        "en": "Rajavaka",
+        "ta": "ரஜவக்க"
+      },
+      "coords": [80.798456, 6.605433]
+    },
+    {
+      "name": {
+        "si": "නවනැලිය",
+        "en": "Nawaneliya",
+        "ta": "நவனெலிய"
+      },
+      "coords": [80.823113, 6.606929]
+    },
+    {
+      "name": {
+        "si": "තන්ජන්තැන්න",
+        "en": "Tanjantenna",
+        "ta": "தன்ஜன்தென்ன"
+      },
+      "coords": [80.850381, 6.624163]
+    },
+    {
+      "name": {
+        "si": "16 කනුව",
+        "en": "16th Mile Post",
+        "ta": "16ஆம் மைல் கல்"
+      },
+      "coords": [80.867126, 6.646765]
+    },
+    {
+      "name": {
+        "si": "කල්තොට",
+        "en": "Kaltota",
+        "ta": "கல்தோட்டை"
+      },
+      "coords": [80.887864, 6.662154]
+    },
+    {
+      "name": {
+        "si": "වේලිඔය",
+        "en": "Welioya",
+        "ta": "வேலியோயா"
+      },
+      "coords": [80.903527, 6.652054]
+    },
+    {
+      "name": {
+        "si": "තුම්මං හන්දිය",
+        "en": "Thummang Junction",
+        "ta": "தும்மங் சந்தி"
+      },
+      "coords": [80.93111, 6.580901]
+    },
+    {
+      "name": {
+        "si": "හම්බෙගමුව නැවතුම",
+        "en": "Hambegamuwa Stand",
+        "ta": "ஹம்பேகமுவ நிலையம்"
+      },
+      "coords": [80.948663, 6.5412312]
+    }
+  ],
+  "BL-04": [
+    {
+      "name": {
+        "si": "බලංගොඩ බස් නැවතුම",
+        "en": "Balangoda Bus Station",
+        "ta": "பலாங்கொடை பஸ் நிலையம்"
+      },
+      "coords": [80.701785, 6.6503023]
+    },
+    {
+      "name": {
+        "si": "ජාතික පාසැල",
+        "en": "National School",
+        "ta": "தேசிய பாடசாலை"
+      },
+      "coords": [80.707849, 6.643827]
+    },
+    {
+      "name": {
+        "si": "කිරිමැටිතැන්න",
+        "en": "Kirimatitenna",
+        "ta": "கிரிமெட்டிதென்ன"
+      },
+      "coords": [80.723935, 6.631739]
+    },
+    {
+      "name": {
+        "si": "දෙපෑලමුල්ල",
+        "en": "Depalamulla",
+        "ta": "தெப்பேலமுல்ல"
+      },
+      "coords": [80.759802, 6.6180825]
+    },
+    {
+      "name": {
+        "si": "බෝවත්ත",
+        "en": "Bowatta",
+        "ta": "Bowatta"
+      },
+      "coords": [80.773679, 6.612515]
+    },
+    {
+      "name": {
+        "si": "රජවක හන්දිය",
+        "en": "Rajavaka-JCT",
+        "ta": "ரஜவக்க சந்தி"
+      },
+      "coords": [80.798456, 6.605433]
+    },
+    {
+      "name": {
+        "si": "දියවින්න",
+        "en": "Diyavinna",
+        "ta": "தியாவின்ன"
+      },
+      "coords": [80.814701, 6.578382]
+    },
+    {
+      "name": {
+        "si": "වැලිපතයාය",
+        "en": "Welipotayaya",
+        "ta": "வெலிப்பொதயாய"
+      },
+      "coords": [80.868119, 6.605514]
+    },
+    {
+      "name": {
+        "si": "බුදුගල",
+        "en": "Budugala",
+        "ta": "புதுகல"
+      },
+      "coords": [80.875642, 6.632878]
+    },
+    {
+      "name": {
+        "si": "කල්තොට",
+        "en": "Kaltota",
+        "ta": "கல்தோட்டை"
+      },
+      "coords": [80.887673, 6.661628]
+    }
+  ],
+  "BL-05": [
+    {
+      "name": {
+        "si": "බලංගොඩ බස් නැවතුම",
+        "en": "Balangoda Bus Station",
+        "ta": "பலாங்கொடை பஸ் நிலையம்"
+      },
+      "coords": [80.701785, 6.6503023]
+    },
+    {
+      "name": {
+        "si": "ජාතික පාසැල",
+        "en": "National School",
+        "ta": "தேசிய பாடசாலை"
+      },
+      "coords": [80.707849, 6.643827]
+    },
+    {
+      "name": {
+        "si": "කිරිමැටිතැන්න",
+        "en": "Kirimatitenna",
+        "ta": "கிரிமெட்டிதென்ன"
+      },
+      "coords": [80.723935, 6.631739]
+    },
+    {
+      "name": {
+        "si": "දෙපෑලමුල්ල",
+        "en": "Depalamulla",
+        "ta": "தெப்பேலமுல்ல"
+      },
+      "coords": [80.759802, 6.6180825]
+    },
+    {
+      "name": {
+        "si": "බෝවත්ත පාසල",
+        "en": "Bowatta school",
+        "ta": "Bowatta school"
+      },
+      "coords": [80.774134, 6.62234]
+    },
+    {
+      "name": {
+        "si": "වටවල හංදිය",
+        "en": "Watawala-jct",
+        "ta": "வட்டவல"
+      },
+      "coords": [80.79724, 6.627286]
+    },
+    {
+      "name": {
+        "si": "මුල්ගම",
+        "en": "Mulgama",
+        "ta": "முல்கம"
+      },
+      "coords": [80.824291, 6.648205]
+    }
+  ],
+  "BL-06": [
+    {
+      "name": {
+        "si": "බලංගොඩ බස් නැවතුම",
+        "en": "Balangoda Bus Station",
+        "ta": "பலாங்கொடை பஸ் நிலையம்"
+      },
+      "coords": [80.701785, 6.6503023]
+    },
+    {
+      "name": {
+        "si": "ජාතික පාසැල",
+        "en": "National School",
+        "ta": "தேசிய பாடசாலை"
+      },
+      "coords": [80.707849, 6.643827]
+    },
+    {
+      "name": {
+        "si": "කිරිමැටිතැන්න",
+        "en": "Kirimatitenna",
+        "ta": "கிரிமெட்டிதென்ன"
+      },
+      "coords": [80.723935, 6.631739]
+    },
+    {
+      "name": {
+        "si": "දෙපෑලමුල්ල",
+        "en": "Depalamulla",
+        "ta": "தெப்பேலமுல்ல"
+      },
+      "coords": [80.759802, 6.6180825]
+    },
+    {
+      "name": {
+        "si": "බෝවත්ත",
+        "en": "Bowatta",
+        "ta": "Bowatta"
+      },
+      "coords": [80.773679, 6.612515]
+    },
+
+    {
+      "name": {
+        "si": "රජවක",
+        "en": "Rajavaka",
+        "ta": "ரஜவக்க"
+      },
+      "coords": [80.798456, 6.605433]
+    },
+    {
+      "name": {
+        "si": "වටවල",
+        "en": "Watawala",
+        "ta": "வட்டவல"
+      },
+      "coords": [80.797062, 6.627469]
+    },
+    {
+      "name": {
+        "si": "මුල්ගම",
+        "en": "Mulgama",
+        "ta": "முல்கம"
+      },
+      "coords": [80.824291, 6.648205]
+    }
+  ],
+  "BL-07": [
+    {
+      "name": {
+        "si": "බලංගොඩ ප්‍රධාන බස් නැවතුම්පොළ",
+        "en": "Balangoda Main Bus Station",
+        "ta": "பலாங்கொடை பிரதான பஸ் நிலையம்"
+      },
+      "coords": [80.701785, 6.6503023]
+    },
+    {
+      "name": {
+        "si": "තුඹගොඩ",
+        "en": "Tumbagoda",
+        "ta": "தேசிய பாடசாலை"
+      },
+      "coords": [80.698864, 6.655657]
+    },
+    {
+      "name": {
+        "si": "උඩුමුල්ල",
+        "en": "Udumulla",
+        "ta": "Udumulla"
+      },
+      "coords": [80.679723, 6.664225]
+    },
+    {
+      "name": {
+        "si": "මස්සැන්න",
+        "en": "Massenna",
+        "ta": "Massenna"
+      },
+      "coords": [80.658707, 6.660915]
+    },
+    {
+      "name": {
+        "si": "සමනල වත්ත",
+        "en": "Samanala Waththa",
+        "ta": "Samanala Waththa"
+      },
+      "coords": [80.621657, 6.678108]
+    }
+  ],
+  "RT-01": [
+    {
+      "name": {
+        "si": "රත්නපුර ප්‍රධාන බස් නැවතුම්පොළ",
+        "en": "Ratnapura Central Bus Stand",
+        "ta": "Ratnapura Central Bus Stand"
+      },
+      "coords": [80.401901, 6.683433]
+    },
+    {
+      "name": {
+        "si": "රත්නපුර නගර සභාව",
+        "en": "Ratnapura Municipal Council",
+        "ta": "Ratnapura Municipal Council"
+      },
+      "coords": [80.403387, 6.678433]
+    },
+    {
+      "name": {
+        "si": "මහින්ද විද්‍යාලය",
+        "en": "Mihindu Vidyalaya",
+        "ta": "Mihindu Vidyalaya"
+      },
+      "coords": [80.399106, 6.683339]
+    },
+    {
+      "name": {
+        "si": "පුලුගුපිටිය හංදිය",
+        "en": "Pulugupitiya Junction",
+        "ta": "Pulugupitiya Junction"
+      },
+      "coords": [80.400312, 6.68034]
+    },
+    {
+      "name": {
+        "si": "කුඩුගල්වත්ත",
+        "en": "Kudugalwatte",
+        "ta": "Kudugalwatteி"
+      },
+      "coords": [80.407326, 6.680277]
+    },
+    {
+      "name": {
+        "si": "රත්නපුර ප්‍රධාන බස් නැවතුම්පොළ",
+        "en": "Ratnapura Central Bus Stand",
+        "ta": "Ratnapura Central Bus Stand"
+      },
+      "coords": [80.401901, 6.683433]
+    }
+  ]
+}
